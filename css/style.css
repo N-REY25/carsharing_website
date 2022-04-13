@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Tenor+Sans&display=swap');
+
+html {
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+header .header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+header .header nav {
+    display: flex;
+}
+
+header .header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.welcome_section {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/1.png);
+    background-size: 130%;
+    background-position: center;
+}
+
+.ws_div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ws_div .wsd_text h2 {
+    font-size: 30px;
+}
+
+.ws_div .wsd_text p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.ws_div .wsd_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ws_div .wsd_info .wsdi_text {
+    display: flex;
+    align-items: center;
+}
+
+.ws_div .wsd_info div {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.ws_div .wsd_info div img {
+    height: 40px;
+}
+
+.ws_div .wsd_info div p {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.ws_div .wsd_info a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 40px;
+    background-color: #0871AC;
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 15px;
+}
+
+.about_section {
+    display: flex;
+    justify-content: center;
+}
+
+.about_section .as_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.about_section .as_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about_section .as_div p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about_section .as_div .asd_items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about_section .as_div .asd_items div {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about_section .as_div .asd_items div h4 {
+    font-size: 18px;
+}
+
+.about_section .as_div .asd_items div img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.car_section {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.car_section .cs_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.car_section .cs_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.car_section .cs_div .csd_filter {
+    display: flex;
+}
+
+.car_section .cs_div .csd_filter p {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.car_section .cs_div .csd_filter a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.rates_section {
+    display: flex;
+    justify-content: center;
+}
+
+.rates_section .rs_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.rates_section .rs_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
