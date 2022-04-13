@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-p, h1, h2, h3, h4, h5 {
+p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
@@ -194,6 +194,27 @@ header .header nav a {
     font-weight: bold;
 }
 
+.car_section .cs_div .csd_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car_section .cs_div .csd_items div {
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 40px;
+   text-align: center;
+}
+
+.car_section .cs_div .csd_items div h4{
+    color: #000;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .rates_section {
     display: flex;
     justify-content: center;
@@ -209,4 +230,43 @@ header .header nav a {
 .rates_section .rs_div h3 {
     font-size: 25px;
     margin-bottom: 20px;
+}
+
+.rates_section .rs_div .rsd_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.rates_section .rs_div .rsd_items div {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0871AC;
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+}
+
+.rates_section .rs_div .rsd_items div h4 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.rates_section .rs_div .rsd_items div p {
+    margin-bottom: 10px;
+}
+
+.rates_section .rs_div .rsd_items div h5 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.rates_section .rs_div .rsd_items div h6 {
+    margin-bottom: 10px;
+    font-size: 17px;
 }
