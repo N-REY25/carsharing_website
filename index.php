@@ -202,7 +202,7 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="booking_section">
+        <section class="booking_section">
             <div class="wrapper">
                 <div class="bs_div">
                     <h3>Бронь</h3>
@@ -210,14 +210,14 @@
                     <div>
                         <input id="name" type="text" placeholder="ФИО">
                         <input id="url" type="text" placeholder="Телефон">
-                        <select name="" id="">
-                            <option value=""></option>
+                        <select id="select" name="">
+                            <option selected disabled>Выберете автомобиль</option>
                         </select>
-                        <button onclick="ajax_reviews_сreate()">Отправить</button>
+                        <button>Забронировать</button>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             $.ajax({
@@ -229,6 +229,8 @@
                     let i = 0;
                     while (i < data['cars'].length) {
                         $('.csd_items').append('<div><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></div>');
+                        i++;
+                        $('#select').append('<option value="">' + data['cars'][i]['name'] + '</option>');
                         i++;
                     }
                 }
