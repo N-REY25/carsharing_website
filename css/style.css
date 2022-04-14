@@ -200,8 +200,10 @@ header .header nav a {
     justify-content: space-between;
 }
 
-.car_section .cs_div .csd_items div {
-   width: 350px;
+.car_section .cs_div .csd_items a {
+    text-decoration: none;
+    color: #000;
+    width: 350px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -480,19 +482,60 @@ header .header nav a {
     margin-bottom: 20px;
 }
 
-.booking_section .bs_div div {
-    width: 450px;
+.booking_section .bs_div .bsd_info {
     display: flex;
-    flex-direction: column;
-    padding-top: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.booking_section .bs_div div input, .booking_section .bs_div div select, .booking_section .bs_div div button {
+.booking_section .bs_div .bsd_info .bsdi_form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking_section .bs_div .bsd_info .bsdi_form input, .booking_section .bs_div .bsd_info .bsdi_form select, .booking_section .bs_div .bsd_info .bsdi_form button {
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 10px;
     border: none;
-    border-radius: 25px;
     margin-bottom: 10px;
+}
+
+.booking_section .bs_div .bsdi_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.booking_section .bs_div .bsdi_text .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.booking_section .bs_div .bsdi_text .icon .img1 {
+    height: 65px;
+}
+
+.booking_section .bs_div .bsdi_text .icon .img2 {
+    width: 220px;
+    height: 70px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

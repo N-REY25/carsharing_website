@@ -46,7 +46,7 @@
                 </div>
             </div>
         </section>
-        <section class="about_section">
+        <section id="about" class="about_section">
             <div class="wrapper">
                 <div class="as_div">
                     <h3>О нас</h3>
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="rates_section">
+        <section id="rates" class="rates_section">
             <div class="wrapper">
                 <div class="rs_div">
                     <h3>Тарифы</h3>
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <section class="app_section">
+        <section id="application" class="app_section">
             <div class="wrapper">
                 <div class="as_div">
                     <h3>Приложение</h3>
@@ -161,7 +161,7 @@
                 </div>
             </div>
         </section>
-        <section class="reviews_section">
+        <section id="reviews" class="reviews_section">
             <div class="wrapper">
                 <div class="res_div">
                     <h3>Отзывы</h3>
@@ -184,7 +184,7 @@
                 </div>
             </div>
         </section>
-        <section class="news_section">
+        <section id="actual" class="news_section">
             <div class="wrapper">
                 <div class="ns_div">
                     <h3>Новости</h3>
@@ -202,22 +202,47 @@
                 </div>
             </div>
         </section>
-        <section class="booking_section">
+        <section id="booking" class="booking_section">
             <div class="wrapper">
                 <div class="bs_div">
                     <h3>Бронь</h3>
                     <p>Выбирайте и бронируйте себе авто и мы Вам перезвоним для уточнения</p>
-                    <div>
-                        <input id="name" type="text" placeholder="ФИО">
-                        <input id="url" type="text" placeholder="Телефон">
-                        <select id="select" name="">
-                            <option selected disabled>Выберете автомобиль</option>
-                        </select>
-                        <button>Забронировать</button>
+                    <div class="bsd_info">
+                        <div class="bsdi_form">
+                            <input id="name_b" type="text" placeholder="ФИО">
+                            <input id="phone" type="text" placeholder="Телефон">
+                            <select id="select">
+                                <?php if (isset($_GET['car'])) : ?>
+                                    <option selected value="<?php echo $_GET['car']?>"><?php echo $_GET['car']?></option>
+                                    <option disabled>----------------</option>
+                                <?php else : ?>
+                                <option selected disabled>Выбирите автомобиль</option>
+                                <?php endif ?>
+                            </select>
+                            <p>Нажимая на конопку "Забронировать" вы автоматически соглашаетесь на обработку персональных данных</p></br>
+                            <button>Забронировать</button>
+                        </div>
+                        <div class="bsdi_text">
+                            <div>
+                                <a href="#"><img src="img/27.png" alt="Кнопка вверх"></a>
+                            </div>
+                            <div class="icon">
+                                <img class="img1" src="img/18.png" alt="Приложения">
+                                <img class="img2" src="img/26.png" alt="Иконки">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="wrapper">
+                <div class="footer">
+                    <h2>FreeDrive</h2>
+                    <p>© 2022 FreeDrive. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             $.ajax({
@@ -228,8 +253,7 @@
                 success: function(data) {
                     let i = 0;
                     while (i < data['cars'].length) {
-                        $('.csd_items').append('<div><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></div>');
-                        i++;
+                        $('.csd_items').append('<a href="/?car=' + data['cars'][i]['name'] + '#booking"><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></a>');
                         $('#select').append('<option value="">' + data['cars'][i]['name'] + '</option>');
                         i++;
                     }
@@ -246,7 +270,7 @@
                         $('.csd_items').empty();
                         let i = 0;
                         while (i <= data['cars'].length) {
-                            $('.csd_items').append('<div><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></div>');
+                            $('.csd_items').append('<a href="/?car=' + data['cars'][i]['name'] + '#booking"><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></a>');
                             i++;
                         }
                     }
