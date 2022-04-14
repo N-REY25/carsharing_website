@@ -270,3 +270,229 @@ header .header nav a {
     margin-bottom: 10px;
     font-size: 17px;
 }
+
+.app_section {
+    display: flex;
+    justify-content: center;
+}
+
+.app_section .as_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.app_section .as_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.app_section .as_div .asd_info {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.app_section .as_div .asd_info .img_1 {
+    height: 600px;
+    position: absolute;
+    left: 0;
+}
+
+.app_section .as_div .asd_info .asdi_text {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app_section .as_div .asd_info .asdi_text h4 {
+    color: #478AC9;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.app_section .as_div .asd_info .asdi_text p {
+    margin-bottom: 20px;
+}
+
+.app_section .as_div .asd_info .asdi_text img {
+    width: 256px;
+    height: 50px;
+}
+
+.reviews_section {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews_section .res_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.reviews_section .res_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.reviews_section .resd_items .resd_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviews_section .resd_items .resd_item img {
+    height: 100px;
+    border-radius: 550px;
+}
+
+.reviews_section .resd_items .resd_item div {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+}
+
+.reviews_сreate_section {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews_сreate_section .rсs_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.reviews_сreate_section .rсs_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.reviews_сreate_section .rсs_div div {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews_сreate_section .rсs_div div input, .reviews_сreate_section .rсs_div div textarea, .reviews_сreate_section .rсs_div div button {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.reviews_сreate_section .rсs_div div textarea {
+    height: 200px;
+}
+
+.news_section {
+    display: flex;
+    justify-content: center;
+}
+
+.news_section .ns_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.news_section .ns_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.news_section .ns_div .nsd_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news_section .ns_div .nsd_items .nsd_item_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+    background-image: url(/img/23.png);
+    background-position: center;
+    background-size: 120%;
+    border-radius: 30px;
+}
+
+.news_section .ns_div .nsd_items .nsd_item_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+    background-image: url(/img/24.png);
+    background-position: center;
+    background-size: 120%;
+    border-radius: 30px;
+}
+
+.news_section .ns_div .nsd_items .nsd_item_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    font-size: 20px;
+    color: rgb(122, 122, 122);
+    background-image: url(/img/25.png);
+    background-position: center;
+    background-size: 120%;
+    border-radius: 30px;
+}
+
+.booking_section {
+    display: flex;
+    justify-content: center;
+}
+
+.booking_section .bs_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.booking_section .bs_div h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.booking_section .bs_div div {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.booking_section .bs_div div input {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}

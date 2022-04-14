@@ -146,9 +146,78 @@
             <div class="wrapper">
                 <div class="as_div">
                     <h3>Приложение</h3>
+                    <div class="asd_info">
+                        <img class="img_1" src="img/17.png" alt="Машина">
+                        <div class="asdi_text">
+                            <h4>01 Скачивание мобильного приложения</h4>
+                            <p>Установите приложение FreeDrive для IOS и Android</p>
+                            <img src="img/18.png" alt="Приложения"></br></br>
+                            <h4>02 Регистрация</h4>
+                            <p>Введите свои данные, скан паспорта и водительские права. Затем после подтверждения системы, добавляете одну из платёжных карт</p></br></br>
+                            <h4>03 Выбор автомобиля</h4>
+                            <p>Выбираете подходящий автомобиль из списка, забронируйте, и начните вашу поездку. По завершении поездки сумма аренды будет автоматически списана с вашей карты</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="reviews_section">
+            <div class="wrapper">
+                <div class="res_div">
+                    <h3>Отзывы</h3>
+                    <div class="resd_items">
+                        <!-- AJAX ответ -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews_сreate_section">
+            <div class="wrapper">
+                <div class="rсs_div">
+                    <h3>Оставить отзыв</h3>
+                    <div>
+                        <input id="name" type="text" placeholder="ФИО">
+                        <input id="url" type="text" placeholder="Ссылка на социальную сеть">
+                        <textarea id="text" name="" placeholder="Комментарий"></textarea>
+                        <button onclick="ajax_reviews_сreate()">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news_section">
+            <div class="wrapper">
+                <div class="ns_div">
+                    <h3>Новости</h3>
+                    <div class="nsd_items">
+                        <div class="nsd_item_1">
+                            <h4>ОТКРЫТИЕ В ПЕНЗЕ</h4>
+                        </div>
+                        <div class="nsd_item_2">
+                            <h4>APPLE PAY ВСЁ</h4>
+                        </div>
+                        <div class="nsd_item_3">
+                            <h4>МЫ В ЯНДЕКС ДЗЕН</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="booking_section">
+            <div class="wrapper">
+                <div class="bs_div">
+                    <h3>Бронь</h3>
+                    <p>Выбирайте и бронируйте себе авто и мы Вам перезвоним для уточнения</p>
+                    <div>
+                        <input id="name" type="text" placeholder="ФИО">
+                        <input id="url" type="text" placeholder="Телефон">
+                        <select name="" id="">
+                            <option value=""></option>
+                        </select>
+                        <button onclick="ajax_reviews_сreate()">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             $.ajax({
@@ -174,10 +243,40 @@
                     success: function(data) {
                         $('.csd_items').empty();
                         let i = 0;
-                        while (i < data['cars'].length) {
+                        while (i <= data['cars'].length) {
                             $('.csd_items').append('<div><img src="img/' + data['cars'][i]['photo'] + '" alt="' + data['cars'][i]['name'] + '"><h4>' + data['cars'][i]['name'] + '</h4></div>');
                             i++;
                         }
+                    }
+                });
+            }
+
+            $.ajax({
+                url: '/api/',
+                method: 'get',
+                dataType: 'json',
+                data: {query: 'reviews'},
+                success: function(data) {
+                    let i = 0;
+                    while (i < data['reviews'].length) {
+                        $('.resd_items').append('<div class="resd_item"><img src="https://imgholder.ru/150x150/8493a8/adb9ca&text=IMAGE+HOLDER&font=kelson" alt="img holder"><div><p>' + data['reviews'][i]['text'] + '</p></br><p>— ' + data['reviews'][i]['name'] + ', ' + data['reviews'][i]['url'] + '</p></div></div>');
+                        i++;
+                    }
+                }
+            });
+
+            function ajax_reviews_сreate() {
+                $.ajax({
+                    url: '/api/',
+                    method: 'post',
+                    dataType: 'json',
+                    data: {query: 'reviews_сreate', name: document.querySelector('#name').value, url: document.querySelector('#url').value, text: document.querySelector('#text').value},
+                    success: function(data) {
+                        console.log(data);
+                        document.querySelector('#name').value ='';
+                        document.querySelector('#url').value = '';
+                        document.querySelector('#text').value = '';
+                        alert("Отзыв отправлен!");
                     }
                 });
             }
