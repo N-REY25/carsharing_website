@@ -66,3 +66,35 @@
         $json = json_encode($arr);
         echo $json;
     }
+
+    if ($_POST['query'] == 'auth') {
+        $user = R::findOne('users', 'WHERE `email` = "'.$_POST['email'].'"');
+        if ($user) {
+            if (md5($_POST['password']) == $user->password) {
+                $_SESSION['user'] = $user;
+                $arr = ['status'=>'successful'];
+                $json = json_encode($arr);
+                echo $json;
+            } else {
+                $arr = ['status'=>'error', 'message'=>'Неверно введен пароль!'];
+                $json = json_encode($arr);
+                echo $json;
+            }
+        } else {
+            $arr = ['status'=>'error', 'message'=>'Пользователь не найден!'];
+            $json = json_encode($arr);
+            echo $json;
+        }
+    }
+
+    if ($_POST['query'] == 'booking') {
+        $book = R::dispense('booking');
+        $book->name = $_POST['name'];
+        $book->phone = $_POST['phone'];
+        $book->car = $_POST['car'];
+        $book->date = date("d.m.Y H:i:s");
+        R::store($book);
+        $arr = ['status'=>'ok'];
+        $json = json_encode($arr);
+        echo $json;
+    }

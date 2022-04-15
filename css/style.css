@@ -15,91 +15,94 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-    width: 1200px;
+    width: 1024px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+/* --- */
+
 header {
-    height: 100px;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-header .header {
-    height: 100%;
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .header h1{
+.h_h1{
     font-family: 'Raleway', sans-serif;
 }
 
-header .header nav {
+.h_a {
+    display: none;
+}
+
+.h_nav {
     display: flex;
 }
 
-header .header nav a {
+.hn_a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
     margin-left: 20px;
 }
 
+.h_ai {
+    height: 30px;
+}
+
+/* --- */
+
 .welcome_section {
     height: 500px;
     display: flex;
     justify-content: center;
     background-image: url(/img/1.png);
-    background-size: 130%;
+    background-size: 120%;
     background-position: center;
 }
 
-.ws_div {
+.welcome {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.ws_div .wsd_text h2 {
+.wt_h2 {
     font-size: 30px;
 }
 
-.ws_div .wsd_text p {
+.wt_p {
     margin-top: 20px;
     font-size: 20px;
 }
 
-.ws_div .wsd_info {
+.w_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.ws_div .wsd_info .wsdi_text {
+.wi_texts {
     display: flex;
     align-items: center;
 }
 
-.ws_div .wsd_info div {
+.wi_text {
     display: flex;
     align-items: center;
     margin-right: 50px;
 }
 
-.ws_div .wsd_info div img {
-    height: 40px;
-}
-
-.ws_div .wsd_info div p {
-    margin-left: 10px;
-    font-size: 25px;
-}
-
-.ws_div .wsd_info a {
+.wi_a {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
@@ -111,35 +114,46 @@ header .header nav a {
     padding-bottom: 15px;
 }
 
+.wit_img {
+    height: 40px;
+}
+
+.wit_p {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+/* -- */
+
 .about_section {
     display: flex;
     justify-content: center;
 }
 
-.about_section .as_div {
+.about {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.about_section .as_div h3 {
+.a_h3, .c_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.about_section .as_div p {
+.a_p {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.about_section .as_div .asd_items {
+.a_items {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.about_section .as_div .asd_items div {
+.a_item {
     width: 260px;
     display: flex;
     flex-direction: column;
@@ -147,14 +161,16 @@ header .header nav a {
     text-align: center;
 }
 
-.about_section .as_div .asd_items div h4 {
+.ai_h4 {
     font-size: 18px;
 }
 
-.about_section .as_div .asd_items div img {
+.ai_img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* --- */
 
 .car_section {
     display: flex;
@@ -162,24 +178,24 @@ header .header nav a {
     background-color: #fff;
 }
 
-.car_section .cs_div {
+.car {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.car_section .cs_div h3 {
+.c_h3 {
     font-size: 25px;
-    margin-bottom: 20px;
     color: #000;
+    margin-bottom: 20px;
 }
 
-.car_section .cs_div .csd_filter {
+.c_filter {
     display: flex;
 }
 
-.car_section .cs_div .csd_filter p {
+.cf_p {
     font-family: 'Raleway', sans-serif;
     color: #000;
     font-weight: bold;
@@ -187,62 +203,64 @@ header .header nav a {
     margin-right: 10px;
 }
 
-.car_section .cs_div .csd_filter a {
+.cf_a {
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
     color: #000;
     font-weight: bold;
 }
 
-.car_section .cs_div .csd_items {
+.c_cars {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.car_section .cs_div .csd_items a {
+.c_car {
     text-decoration: none;
     color: #000;
-    width: 350px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   margin-top: 40px;
-   text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    text-align: center;
 }
 
-.car_section .cs_div .csd_items div h4{
+.cc_h4 {
     color: #000;
     font-size: 20px;
     margin-top: 10px;
 }
+
+/* --- */
 
 .rates_section {
     display: flex;
     justify-content: center;
 }
 
-.rates_section .rs_div {
+.rates {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.rates_section .rs_div h3 {
+.r_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.rates_section .rs_div .rsd_items {
+.r_items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.rates_section .rs_div .rsd_items div {
-    width: 320px;
+.r_item {
+    width: 250px;
     display: flex;
     flex-direction: column;
     background-color: #0871AC;
@@ -253,104 +271,108 @@ header .header nav a {
     padding-bottom: 20px;
 }
 
-.rates_section .rs_div .rsd_items div h4 {
+.ri_h4 {
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.rates_section .rs_div .rsd_items div p {
+.ri_p {
     margin-bottom: 10px;
 }
 
-.rates_section .rs_div .rsd_items div h5 {
+.ri_h5 {
     margin-bottom: 10px;
     font-size: 20px;
 }
 
-.rates_section .rs_div .rsd_items div h6 {
+.ri_h6 {
     margin-bottom: 10px;
     font-size: 17px;
 }
+
+/* --- */
 
 .app_section {
     display: flex;
     justify-content: center;
 }
 
-.app_section .as_div {
+.app {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.app_section .as_div h3 {
+.a_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.app_section .as_div .asd_info {
+.a_info {
     display: flex;
     justify-content: flex-end;
 }
 
-.app_section .as_div .asd_info .img_1 {
+.ain_img {
     height: 600px;
     position: absolute;
     left: 0;
 }
 
-.app_section .as_div .asd_info .asdi_text {
+.ain_text {
     width: 600px;
     display: flex;
     flex-direction: column;
 }
 
-.app_section .as_div .asd_info .asdi_text h4 {
+.aint_h4 {
     color: #478AC9;
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.app_section .as_div .asd_info .asdi_text p {
+.aint_p {
     margin-bottom: 20px;
 }
 
-.app_section .as_div .asd_info .asdi_text img {
+.aint_img {
     width: 256px;
     height: 50px;
 }
+
+/* --- */
 
 .reviews_section {
     display: flex;
     justify-content: center;
 }
 
-.reviews_section .res_div {
+.reviews {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.reviews_section .res_div h3 {
+.re_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.reviews_section .resd_items .resd_item {
+.re_item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.reviews_section .resd_items .resd_item img {
+.rei_img {
     height: 100px;
     border-radius: 550px;
 }
 
-.reviews_section .resd_items .resd_item div {
+.rei_text {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -364,30 +386,32 @@ header .header nav a {
     margin-left: 20px;
 }
 
+/* --- */
+
 .reviews_сreate_section {
     display: flex;
     justify-content: center;
 }
 
-.reviews_сreate_section .rсs_div {
+.reviews_сreate {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.reviews_сreate_section .rсs_div h3 {
+.rc_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.reviews_сreate_section .rсs_div div {
+.rc_form {
     width: 450px;
     display: flex;
     flex-direction: column;
 }
 
-.reviews_сreate_section .rсs_div div input, .reviews_сreate_section .rсs_div div textarea, .reviews_сreate_section .rсs_div div button {
+.rcf_input, .rcf_textarea, .rcf_section, .rcf_button {
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -397,104 +421,94 @@ header .header nav a {
     margin-bottom: 10px;
 }
 
-.reviews_сreate_section .rсs_div div textarea {
+.rcf_textarea {
     height: 200px;
 }
+
+/* --- */
 
 .news_section {
     display: flex;
     justify-content: center;
 }
 
-.news_section .ns_div {
+.news {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.news_section .ns_div h3 {
+.n_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.news_section .ns_div .nsd_items {
+.n_items {
     display: flex;
     justify-content: space-between;
 }
 
-.news_section .ns_div .nsd_items .nsd_item_1 {
+.n_item {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     font-size: 20px;
-    color: rgb(122, 122, 122);
+    color: #fff;
     background-image: url(/img/23.png);
     background-position: center;
     background-size: 120%;
     border-radius: 30px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.news_section .ns_div .nsd_items .nsd_item_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    font-size: 20px;
-    color: rgb(122, 122, 122);
+.n_item_1 {
+    background-image: url(/img/23.png);
+}
+
+.n_item_2 {
     background-image: url(/img/24.png);
-    background-position: center;
-    background-size: 120%;
-    border-radius: 30px;
 }
 
-.news_section .ns_div .nsd_items .nsd_item_3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    font-size: 20px;
-    color: rgb(122, 122, 122);
+.n_item_3 {
     background-image: url(/img/25.png);
-    background-position: center;
-    background-size: 120%;
-    border-radius: 30px;
 }
+
+/* --- */
 
 .booking_section {
     display: flex;
     justify-content: center;
 }
 
-.booking_section .bs_div {
+.booking {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.booking_section .bs_div h3 {
+.b_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.booking_section .bs_div .bsd_info {
+.b_items {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.booking_section .bs_div .bsd_info .bsdi_form {
+.b_form {
     width: 350px;
     display: flex;
     flex-direction: column;
 }
 
-.booking_section .bs_div .bsd_info .bsdi_form input, .booking_section .bs_div .bsd_info .bsdi_form select, .booking_section .bs_div .bsd_info .bsdi_form button {
+.bf_input, .bf_select, .bf_button {
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -503,27 +517,29 @@ header .header nav a {
     margin-bottom: 10px;
 }
 
-.booking_section .bs_div .bsdi_text {
+.b_info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-.booking_section .bs_div .bsdi_text .icon {
+.bi_icon {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.booking_section .bs_div .bsdi_text .icon .img1 {
+.bi_img1 {
     height: 65px;
 }
 
-.booking_section .bs_div .bsdi_text .icon .img2 {
+.bi_img2 {
     width: 220px;
     height: 70px;
 }
+
+/* --- */
 
 footer {
     display: flex;
@@ -538,4 +554,113 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+/* --- */
+
+@media screen and (max-width:768px) {
+    .h_nav, .ain_img {
+        display: none;
+    }
+
+    .h_a {
+        display: flex;
+    }
+
+    .welcome_section {
+        height: 350px;
+        background-size: 160%;
+    }
+
+    .wit_img {
+        height: 30px;
+    }
+
+    .wit_p {
+        font-size: 17px;
+    }
+
+    .a_item {
+        width: 225px;
+    }
+
+    .r_items {
+        margin-bottom: 0;
+    }
+
+    .r_item {
+        margin-bottom: 40px;
+    }
+
+    .n_item {
+        width: 150px;
+        height: 200px;
+        font-size: 15px;
+    }
+
+    .rei_text {
+        width: 100%;
+    }
+
+    .a_info {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .wi_texts, .b_info, .f_h2 {
+        display: none;
+    }
+
+    .welcome_section {
+        background-size: 300%;
+    }
+
+    .a_p {
+        text-align: justify;
+    }
+
+    .a_items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .a_item {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .c_filter {
+        font-size: 14px;
+    }
+
+    .ain_text, .rc_form, .b_form {
+        width: 100%;
+    }
+
+    .n_item {
+        width: 80px;
+        height: 100px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .welcome_section {
+        background-size: 400%;
+    }
+
+    .rei_img {
+        display: none;
+    }
+
+    .c_filter {
+        font-size: 10px;
+    }
+
+    .n_item {
+        width: 50px;
+        height: 100px;
+        font-size: 10px;
+    }
 }
