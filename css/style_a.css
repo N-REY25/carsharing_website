@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Tenor+Sans&display=swap');
+
+html {
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(237, 237, 237);
+    color: #fff;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1024px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* --- */
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h_h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+.h_a {
+    display: none;
+}
+
+.h_nav {
+    display: flex;
+}
+
+.hn_a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.h_ai {
+    height: 30px;
+}
+
+/* --- */
+
+.html_login, .html_dashboard {
+    height: 100%;
+}
+
+.body_login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_login {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_login h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.form_login input {
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form_login input:focus {
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.form_login p {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.form_login button {
+    border: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form_login button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.form_login a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.form_login a:hover {
+    text-decoration: underline;
+}
