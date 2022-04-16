@@ -7,7 +7,6 @@ html {
 body {
     margin: 0;
     background-color: rgb(237, 237, 237);
-    color: #fff;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -28,6 +27,7 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #000;
+    color: #fff;
 }
 
 .header {
@@ -143,4 +143,85 @@ header {
 
 .form_login a:hover {
     text-decoration: underline;
+}
+
+.dashboard_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.content_reviews_section, .content_booking_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.content_reviews, .content_booking {
+    display: flex;
+    flex-direction: column;
+}
+
+.cr_h3, .cb_h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.cr_active, .cr_arhive {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.cra_items, .cd_items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.cra_item, .cd_item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.crai_text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.crai_button {
+    display: flex;
+}
+
+.craib_up, .craib_down {
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.craib_up {
+    border-color: rgb(60, 177, 62);
+    color: rgb(60, 177, 62);
+}
+
+.craib_down {
+    border-color: rgb(177, 60, 60);
+    color: rgb(177, 60, 60);
+}
+
+.cb_book {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }

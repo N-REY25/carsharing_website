@@ -10,7 +10,9 @@
     // Обработка отображения страниц
     if (isset($_SESSION['user'])) {
         switch ($_GET['page']) {
-            case 'reviews': include 'dashboard.php';
+            case 'reviews': include 'content.php';
+            break;
+            case 'booking': include 'content.php';
             break;
             default: include 'dashboard.php';
         }

@@ -45,10 +45,21 @@
     }
 
     if ($_GET['query'] == 'reviews') {
-        $reviews = R::findAll('reviews', 'WHERE status = "1" LIMIT 3');
+        $reviews = R::findAll('reviews', 'WHERE status = "1" ORDER BY id DESC LIMIT 3');
         $rev_arr = array();
         foreach ($reviews as $rev) {
-            array_push($rev_arr, ['id'=>$rev['id'], 'name'=>$rev['name'], 'url'=>$rev['url'], 'text'=>$rev['text']]);
+            array_push($rev_arr, ['id'=>$rev['id'], 'name'=>$rev['name'], 'url'=>$rev['url'], 'text'=>$rev['text'], 'status'=>$rev['status']]);
+        }
+        $arr = ['status'=>'ok', 'reviews'=>$rev_arr];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
+    if ($_GET['query'] == 'admin_reviews') {
+        $reviews = R::findAll('reviews', 'ORDER BY id DESC');
+        $rev_arr = array();
+        foreach ($reviews as $rev) {
+            array_push($rev_arr, ['id'=>$rev['id'], 'name'=>$rev['name'], 'url'=>$rev['url'], 'text'=>$rev['text'], 'status'=>$rev['status']]);
         }
         $arr = ['status'=>'ok', 'reviews'=>$rev_arr];
         $json = json_encode($arr);
@@ -60,6 +71,24 @@
         $rev->name = $_POST['name'];
         $rev->url = $_POST['url'];
         $rev->text = $_POST['text'];
+        $rev->status = 0;
+        R::store($rev);
+        $arr = ['status'=>'ok'];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
+    if ($_GET['query'] == 'reviews_up') {
+        $rev = R::load('reviews', $_GET['reviews_id']);
+        $rev->status = 1;
+        R::store($rev);
+        $arr = ['status'=>'ok'];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
+    if ($_GET['query'] == 'reviews_down') {
+        $rev = R::load('reviews', $_GET['reviews_id']);
         $rev->status = 0;
         R::store($rev);
         $arr = ['status'=>'ok'];
@@ -95,6 +124,17 @@
         $book->date = date("d.m.Y H:i:s");
         R::store($book);
         $arr = ['status'=>'ok'];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
+    if ($_GET['query'] == 'booking_get') {
+        $booking = R::findAll('booking', 'ORDER BY id DESC');
+        $book_arr = array();
+        foreach ($booking as $boo) {
+            array_push($book_arr, ['id'=>$boo['id'], 'name'=>$boo['name'], 'phone'=>$boo['phone'], 'car'=>$boo['car'], 'date'=>$boo['date']]);
+        }
+        $arr = ['status'=>'ok', 'booking'=>$book_arr];
         $json = json_encode($arr);
         echo $json;
     }

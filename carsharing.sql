@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 14 2022 г., 21:19
+-- Время создания: Апр 15 2022 г., 19:33
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -32,8 +32,16 @@ CREATE TABLE `booking` (
   `id` int(11) NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `car` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
+  `car` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `booking`
+--
+
+INSERT INTO `booking` (`id`, `name`, `phone`, `car`, `date`) VALUES
+(1, 'Андрей Сергеевич Герасимов', '+79521968636', 'Volkswagen Polo', '14.04.2022 23:11:55');
 
 -- --------------------------------------------------------
 
@@ -82,9 +90,9 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`id`, `name`, `url`, `text`, `status`) VALUES
-(1, 'Антон Максимов', '@antonmaxymv', 'Каршеринг? Да ещё и в Пензе, чудеса современности! Сервис новый и уже радует. Очень удобно, нежели общественный транспорт.', 1),
+(1, 'Антон Максимов', '@antonmaxymv', 'Каршеринг? Да ещё и в Пензе, чудеса современности! Сервис новый и уже радует. Очень удобно, нежели общественный транспорт.', 0),
 (2, 'Мария Власова', '@maryvlasovva', 'Приехала из другого города более маленького, там конечно про это даже и не слышали. Знакомые посоветовали данный сервис, и хочу сказать я осталась довольна. Спасибо FreeDrive за новые разработки в городе Пенза.', 1),
-(3, 'Максим Козловский', '@maxkozlv1', 'Очень удобно и просто, а главное экономично, скачал приложение, зарегистрировался и готово, уже выбирай авто по своему бюджету, разные тарифы, а так всё отлично!', 1),
+(3, 'Максим Козловский', '@maxkozlv1', 'Очень удобно и просто, а главное экономично, скачал приложение, зарегистрировался и готово, уже выбирай авто по своему бюджету, разные тарифы, а так всё отлично!', 0),
 (4, 'Максим', '@maxkozlv1', 'Очень удобно и просто, а главное эко', 0);
 
 -- --------------------------------------------------------
@@ -100,6 +108,13 @@ CREATE TABLE `users` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`) VALUES
+(1, 'Даня', 'Гришин', 'admin@gmail.com', 'bc694938cebef351181642853f9db59f');
 
 --
 -- Индексы сохранённых таблиц
@@ -137,7 +152,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `cars`
@@ -155,7 +170,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

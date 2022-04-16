@@ -8,6 +8,16 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <section class="menu menu_off" onclick="menu_up()">
+            <div class="m_menu">
+                <a class="m_a" href="/#actual">Актуально</a>
+                <a class="m_a" href="/#about">О нас</a>
+                <a class="m_a" href="/#car">Автомобили</a>
+                <a class="m_a" href="/#rates">Тарифы</a>
+                <a class="m_a" href="/#application">Приложение</a>
+                <a class="m_a" href="/#reviews">Отзывы</a>
+            </div>
+        </section>
         <header>
             <div class="wrapper">
                 <div class="header">
@@ -20,7 +30,7 @@
                         <a class="hn_a" href="#application">Приложение</a>
                         <a class="hn_a" href="#reviews">Отзывы</a>
                     </nav>
-                    <a class="h_a" href=""><img class="h_ai" src="img/menu.png" alt="Меню"></a>
+                    <a class="h_a" href="#" onclick="menu_down()"><img class="h_ai" src="img/menu.png" alt="Меню"></a>
                 </div>
             </div>
         </header>
@@ -320,6 +330,20 @@
                         document.querySelector('#phone').value = '';
                         alert("Бронь отправлена!");
                     }
+                });
+            }
+            
+            function menu_down() {
+                $('.menu').slideToggle(300, function(){
+                    $('.menu').removeClass('menu_off');
+                    $('.menu').addClass('menu_on');
+                });
+            }
+
+            function menu_up() {
+                $('.menu').slideToggle(300, function(){
+                    $('.menu').removeClass('menu_off');
+                    $('.menu').addClass('menu_on');
                 });
             }
         </script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" style="height: 100%;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FreeDrive - 404</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body style="display: flex; flex-direction: column; height: 100%;">
+        <section class="menu menu_off" onclick="menu_up()">
+            <div class="m_menu">
+                <a class="m_a" href="/#actual">Актуально</a>
+                <a class="m_a" href="/#about">О нас</a>
+                <a class="m_a" href="/#car">Автомобили</a>
+                <a class="m_a" href="/#rates">Тарифы</a>
+                <a class="m_a" href="/#application">Приложение</a>
+                <a class="m_a" href="/#reviews">Отзывы</a>
+            </div>
+        </section>
+        <header>
+            <div class="wrapper">
+                <div class="header">
+                    <h1 class="h_h1">FreeDrive</h1>
+                    <nav class="h_nav">
+                        <a class="hn_a" href="/#actual">Актуально</a>
+                        <a class="hn_a" href="/#about">О нас</a>
+                        <a class="hn_a" href="/#car">Автомобили</a>
+                        <a class="hn_a" href="/#rates">Тарифы</a>
+                        <a class="hn_a" href="/#application">Приложение</a>
+                        <a class="hn_a" href="/#reviews">Отзывы</a>
+                    </nav>
+                    <a class="h_a" href="#" onclick="menu_down()"><img class="h_ai" src="img/menu.png" alt="Меню"></a>
+                </div>
+            </div>
+        </header>
+        <section class="error_section">
+            <div class="wrapper">
+                <div class="error">
+                    <img class="e_img" src="img/6.png" alt="Поддержка">
+                    <div class="e_text">
+                        <h2>ОШИБКА 404</h2>
+                        <p>OOPS... Извините, данная страница не найдена!</br>Что-то пошло не так или страница больше не существует.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="wrapper">
+                <div class="footer">
+                    <h2 class="f_h2">FreeDrive</h2>
+                    <p class="f_p">© 2022 FreeDrive. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            function menu_down() {
+                $('.menu').slideToggle(300, function(){
+                    $('.menu').removeClass('menu_off');
+                    $('.menu').addClass('menu_on');
+                });
+            }
+
+            function menu_up() {
+                $('.menu').slideToggle(300, function(){
+                    $('.menu').removeClass('menu_off');
+                    $('.menu').addClass('menu_on');
+                });
+            }
+        </script>
+    </body>
+</html>
