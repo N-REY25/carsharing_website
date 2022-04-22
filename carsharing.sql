@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 15 2022 г., 19:33
+-- Время создания: Апр 23 2022 г., 01:35
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -36,13 +36,6 @@ CREATE TABLE `booking` (
   `date` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `booking`
---
-
-INSERT INTO `booking` (`id`, `name`, `phone`, `car`, `date`) VALUES
-(1, 'Андрей Сергеевич Герасимов', '+79521968636', 'Volkswagen Polo', '14.04.2022 23:11:55');
-
 -- --------------------------------------------------------
 
 --
@@ -70,6 +63,28 @@ INSERT INTO `cars` (`id`, `name`, `photo`, `class`) VALUES
 (7, 'Audi A6', '14.png', 'Премиум'),
 (8, 'Mercedes C-Class', '15.png', 'Премиум'),
 (9, 'BMW 4', '16.png', 'Комфорт');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `autor` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `text`, `autor`) VALUES
+(1, 'ОТКРЫТИЕ В ПЕНЗЕ', 'Новый прокат автомобилей уже в Пензе, здесь всё, чтобы быть для Вас удобным сервисом!', 'Admin'),
+(2, 'APPLE PAY ВСЁ', 'Apple Pay в России больше не работает! Теперь платить iPhone бесконтактно не получится.', 'Admin'),
+(3, 'МЫ В ЯНДЕКС ДЗЕН', 'Теперь мы в Яндекс.Дзен! Смотрите за обновлениями в наших соцсетях.', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -133,6 +148,12 @@ ALTER TABLE `cars`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `reviews`
 --
 ALTER TABLE `reviews`
@@ -159,6 +180,12 @@ ALTER TABLE `booking`
 --
 ALTER TABLE `cars`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT для таблицы `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `reviews`

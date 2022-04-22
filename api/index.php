@@ -1,6 +1,17 @@
 <?php
     require '../orm/db.php';
 
+    if ($_GET['query'] == 'news') {
+        $news = R::findAll('news', 'ORDER BY id DESC LIMIT 3');
+        $new_arr = array();
+        foreach ($news as $new) {
+            array_push($new_arr, ['id'=>$new['id'], 'title'=>$new['title'], 'text'=>$new['text'], 'autor'=>$new['autor']]);
+        }
+        $arr = ['status'=>'ok', 'news'=>$new_arr];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
     if ($_GET['query'] == 'cars') {
         if ($_GET['filter'] == 'all_cars') {
             $cars = R::findAll('cars');

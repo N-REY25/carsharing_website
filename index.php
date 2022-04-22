@@ -52,7 +52,17 @@
                                 <p class="wit_p">8 800 600-34-82</p>
                             </div>
                         </div>
-                        <a class="wi_a" href="#booking">НАЧАТЬ</a>
+                        <a id="button-down" class="wi_a" href="#booking">НАЧАТЬ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="actual" class="news_section">
+            <div class="wrapper">
+                <div class="news">
+                    <h3 class="n_h3">Новости</h3>
+                    <div class="n_items">
+                        <!-- AJAX ответ -->
                     </div>
                 </div>
             </div>
@@ -195,24 +205,6 @@
                 </div>
             </div>
         </section>
-        <section id="actual" class="news_section">
-            <div class="wrapper">
-                <div class="news">
-                    <h3 class="n_h3">Новости</h3>
-                    <div class="n_items">
-                        <div class="n_item n_item_1">
-                            <h4>ОТКРЫТИЕ В ПЕНЗЕ</h4>
-                        </div>
-                        <div class="n_item n_item_2">
-                            <h4>APPLE PAY ВСЁ</h4>
-                        </div>
-                        <div class="n_item n_item_3">
-                            <h4>МЫ В ЯНДЕКС ДЗЕН</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="booking" class="booking_section">
             <div class="wrapper">
                 <div class="booking">
@@ -234,13 +226,8 @@
                             <button class="bf_button" onclick="ajax_booking_сreate()">Забронировать</button>
                         </div>
                         <div class="b_info">
-                            <div>
-                                <a href="#"><img src="img/27.png" alt="Кнопка вверх"></a>
-                            </div>
-                            <div class="bi_icon">
-                                <img class="bi_img1" src="img/18.png" alt="Приложения">
-                                <img class="bi_img2" src="img/26.png" alt="Иконки">
-                            </div>
+                            <img class="bi_img1" src="img/18.png" alt="Приложения">
+                            <img class="bi_img2" src="img/26.png" alt="Иконки">
                         </div>
                     </div>
                 </div>
@@ -254,8 +241,23 @@
                 </div>
             </div>
         </footer>
+        <a id="button-up" class="top a_off" href="#"><img src="img/27.png" alt="Кнопка вверх"></a>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
+            $.ajax({
+                url: '/api/',
+                method: 'get',
+                dataType: 'json',
+                data: {query: 'news'},
+                success: function(data) {
+                    let i = 0;
+                    while (i < data['news'].length) {
+                        $('.n_items').append('<a class="n_item n_item_1" href="/new?id=' + data['news'][i]['id'] + '"><h4>' + data['news'][i]['title'] + '</h4></a>');
+                        i++;
+                    }
+                }
+            });
+
             $.ajax({
                 url: '/api/',
                 method: 'get',
@@ -296,7 +298,7 @@
                 success: function(data) {
                     let i = 0;
                     while (i < data['reviews'].length) {
-                        $('.re_items').append('<div class="re_item"><img class="rei_img" src="https://imgholder.ru/150x150/8493a8/adb9ca&text=IMAGE+HOLDER&font=kelson" alt="img holder"><div class="rei_text"><p>' + data['reviews'][i]['text'] + '</p></br><p>— ' + data['reviews'][i]['name'] + ', ' + data['reviews'][i]['url'] + '</p></div></div>');
+                        $('.re_items').append('<div class="re_item"><img class="rei_img" src="https://cdn-icons-png.flaticon.com/512/476/476705.png" alt="img holder"><div class="rei_text"><p>' + data['reviews'][i]['text'] + '</p></br><p>— ' + data['reviews'][i]['name'] + ', ' + data['reviews'][i]['url'] + '</p></div></div>');
                         i++;
                     }
                 }
@@ -332,6 +334,14 @@
                     }
                 });
             }
+
+            $(document).on("scroll", window, function () {
+                if ($(window).scrollTop() > 500) {
+                    $('.top').removeClass('a_off');
+                } else {
+                    $('.top').addClass('a_off');
+                }
+            });
             
             function menu_down() {
                 $('.menu').slideToggle(300, function(){
@@ -346,6 +356,20 @@
                     $('.menu').addClass('menu_on');
                 });
             }
+
+            $('#button-up').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+
+            $('#button-down').click(function () {
+                $('body,html').animate({
+                    scrollTop: 4300
+                }, 2000);
+                return false;
+            });
         </script>
     </body>
 </html>
