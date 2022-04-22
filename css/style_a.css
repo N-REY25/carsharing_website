@@ -151,18 +151,18 @@ header {
     margin-top: 40px;
 }
 
-.content_reviews_section, .content_booking_section {
+.content_reviews_section, .content_booking_section, .content_news_section {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
-.content_reviews, .content_booking {
+.content_reviews, .content_booking, .content_news {
     display: flex;
     flex-direction: column;
 }
 
-.cr_h3, .cb_h3 {
+.cr_h3, .cb_h3, .cn_h3 {
     font-size: 25px;
     margin-bottom: 20px;
 }
@@ -224,4 +224,40 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+}
+
+.content_news {
+    width: 350px;
+}
+
+.cn_input {
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.cn_input:focus {
+    border-color: #000;
+}
+
+.button_news {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }

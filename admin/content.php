@@ -21,6 +21,7 @@
                     <nav class="h_nav">
                         <a href="/admin?page=reviews" class="hn_a">Отзывы</a>
                         <a href="/admin?page=booking" class="hn_a">Бронь</a>
+                        <a href="/admin?page=news" class="hn_a">Новости</a>
                     </nav>
                     <nav class="h_nav">
                         <p class="hn_a">Администратор - <?php echo $_SESSION['user']->surname ?> <?php echo $_SESSION['user']->name ?></p>
@@ -153,6 +154,30 @@
                 }
 
                 setInterval(ajax, 3000);
+            </script>
+        <?php elseif ($_GET['page'] == 'news') : ?>
+            <section class="content_news_section">
+                <div class="wrapper">
+                    <div class="content_news">
+                        <h3 class="cn_h3">Добавить новость</h3>
+                        <input id="title" class="cn_input" type="text" placeholder="Введите заголовок">
+                        <textarea id="news_text" class="cn_input" placeholder="Введите текст новости"></textarea>
+                        <button class="button_news" onclick="news_up()">Добавить</button>
+                    </div>
+                </div>
+            </section>
+            <script>
+                function news_up() {
+                    $.ajax({
+                        url: '/api/',
+                        method: 'post',
+                        dataType: 'json',
+                        data: {query: 'news_up', title:  document.querySelector('#title').value, text:  document.querySelector('#news_text').value},
+                        success: function(data) {
+                            alert('Новость опубликована!');
+                        }
+                    });
+                }
             </script>
         <?php else : ?>
 

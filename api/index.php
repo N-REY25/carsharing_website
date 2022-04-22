@@ -12,6 +12,17 @@
         echo $json;
     }
 
+    if ($_POST['query'] == 'news_up') {
+        $new = R::dispense('news');
+        $new->title = $_POST['title'];
+        $new->text = $_POST['text'];
+        $new->autor = $_SESSION['user']->surname.' '.$_SESSION['user']->name;
+        R::store($new);
+        $arr = ['status'=>'ok'];
+        $json = json_encode($arr);
+        echo $json;
+    }
+
     if ($_GET['query'] == 'cars') {
         if ($_GET['filter'] == 'all_cars') {
             $cars = R::findAll('cars');

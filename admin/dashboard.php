@@ -20,6 +20,7 @@
                     <nav class="h_nav">
                         <a href="/admin?page=reviews" class="hn_a">Отзывы</a>
                         <a href="/admin?page=booking" class="hn_a">Бронь</a>
+                        <a href="/admin?page=news" class="hn_a">Новости</a>
                     </nav>
                     <nav class="h_nav">
                         <p class="hn_a">Администратор - <?php echo $_SESSION['user']->surname ?> <?php echo $_SESSION['user']->name ?></p>

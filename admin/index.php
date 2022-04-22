@@ -14,6 +14,8 @@
             break;
             case 'booking': include 'content.php';
             break;
+            case 'news': include 'content.php';
+            break;
             default: include 'dashboard.php';
         }
     } else {
