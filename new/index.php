@@ -31,12 +31,12 @@
                 <div class="header">
                     <h1 class="h_h1">FreeDrive</h1>
                     <nav class="h_nav">
-                        <a class="hn_a" href="#actual">Актуально</a>
-                        <a class="hn_a" href="#about">О нас</a>
-                        <a class="hn_a" href="#car">Автомобили</a>
-                        <a class="hn_a" href="#rates">Тарифы</a>
-                        <a class="hn_a" href="#application">Приложение</a>
-                        <a class="hn_a" href="#reviews">Отзывы</a>
+                        <a class="hn_a" href="/#actual">Актуально</a>
+                        <a class="hn_a" href="/#about">О нас</a>
+                        <a class="hn_a" href="/#car">Автомобили</a>
+                        <a class="hn_a" href="/#rates">Тарифы</a>
+                        <a class="hn_a" href="/#application">Приложение</a>
+                        <a class="hn_a" href="/#reviews">Отзывы</a>
                     </nav>
                     <a class="h_a" href="#" onclick="menu_down()"><img class="h_ai" src="../img/menu.png" alt="Меню"></a>
                 </div>
@@ -49,8 +49,7 @@
                         <a class="nnc_a" href="/#actual">Новости</a>
                         <p>/ <?php echo $new->title ?></p>
                     </div>
-                    <img class="nn_img" src="../img/23.png" alt="Новость">
-                    <h3><?php echo $new->title ?></h3>
+                    <h3 class="nn_h3"><?php echo $new->title ?></h3>
                     <p class="nn_p">Автор: <?php echo $new->autor ?></p>
                     <p><?php echo $new->text ?></p>
                 </div>

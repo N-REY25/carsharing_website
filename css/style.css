@@ -481,15 +481,7 @@ header {
 }
 
 .n_item_1 {
-    background-image: url(/img/23.png);
-}
-
-.n_item_2 {
-    background-image: url(/img/24.png);
-}
-
-.n_item_3 {
-    background-image: url(/img/25.png);
+    background-image: url(/img/news.png);
 }
 
 /* --- */
@@ -583,6 +575,10 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 25px;
+}
+
+.nn_h3 {
+    margin-top: 10px;
 }
 
 .nn_p {
